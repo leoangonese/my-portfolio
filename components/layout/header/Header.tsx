@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes'
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [color, setColor] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -34,8 +35,26 @@ const Header = () => {
       )
     }
   }
+
+  const changeColor = () => {
+    if (window.scrollY >= 10) {
+      setColor(true)
+    } else {
+      setColor(false)
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', changeColor)
+  }
   return (
-    <header className="absolute text-white bg-blue-300 dark:bg-gray-700 inset-x-0 w-full bg-white-600 dark:bg-gray-700 flex justify-between items-center px-20">
+    <header
+      className={`fixed text-white ${
+        color === true
+          ? 'bg-blue-300 dark:bg-gray-700'
+          : 'bg-trasparent dark:bg-trasparent'
+      } inset-x-0 w-full flex justify-between items-center px-20 duration-300`}
+    >
       <figure>
         <img src="favicon.ico" alt="" width={'50px'} />
       </figure>
