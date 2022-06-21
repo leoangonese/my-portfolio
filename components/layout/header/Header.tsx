@@ -49,11 +49,11 @@ const Header = () => {
   }
   return (
     <header
-      className={`fixed text-white ${
+      className={`fixed max-w-screen-2xl mx-auto text-white ${
         color === true
           ? 'bg-blue-300 dark:bg-gray-700'
           : 'bg-trasparent dark:bg-trasparent'
-      } inset-x-0 w-full flex justify-between items-center px-20 duration-300`}
+      } inset-x-0 w-full flex justify-between items-center duration-300 px-20`}
     >
       <figure>
         <img src="favicon.ico" alt="" width={'50px'} />

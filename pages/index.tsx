@@ -1,8 +1,13 @@
 import type { NextPage } from 'next'
-import Layout from '../components'
+import Hero from '../components/layout/menu/Hero'
 
 const Home: NextPage = () => {
-  return <Layout></Layout>
+  return (
+    <>
+      <Hero />
+      <Hero />
+    </>
+  )
 }
 
 export default Home
