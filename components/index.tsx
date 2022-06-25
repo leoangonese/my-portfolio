@@ -7,6 +7,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="max-w-screen-2xl mx-auto px-20">
       <Header />
       {children}
+      Hello mana
     </div>
   )
 }
