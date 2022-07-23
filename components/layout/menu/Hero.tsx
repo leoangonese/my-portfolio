@@ -1,11 +1,11 @@
 const Hero = () => {
   return (
-    <main className="h-screen w-full flex items-center bg-blue-600">
+    <main className="h-screen w-full flex items-center">
       <section className="w-1/2">
-        <h1 className="text-5xl mb-2 main-title">Leonardo Angonese</h1>
-        <h2 className="text-4xl">Front-End Developer</h2>
+        <h1 className="text-5xl mb-2 main-title text-primary">Leonardo Angonese</h1>
+        <h2 className="text-4xl font-light">Front-End Developer</h2>
       </section>
-      <figure className="w-1/2">Image</figure>
+      <figure className="w-1/2 h-full bg-hero bg-no-repeat bg-center"></figure>
     </main>
   )
 }

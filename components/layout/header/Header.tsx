@@ -20,7 +20,7 @@ const Header = () => {
     if (currentTheme === 'dark') {
       return (
         <SunIcon
-          className="w-7 h-7 hover:text-blue-600 duration-300"
+          className="w-7 h-7 hover:text-primary duration-300"
           role="button"
           onClick={() => setTheme('light')}
         />
@@ -28,7 +28,7 @@ const Header = () => {
     } else {
       return (
         <MoonIcon
-          className="w-7 h-7 hover:text-blue-600 duration-300"
+          className="w-7 h-7 hover:text-primary duration-300"
           role="button"
           onClick={() => setTheme('dark')}
         />
@@ -49,11 +49,11 @@ const Header = () => {
   }
   return (
     <header
-      className={`fixed max-w-screen-2xl mx-auto text-white ${
+      className={`py-2 fixed max-w-screen-2xl mx-auto ${
         color === true
-          ? 'bg-blue-300 dark:bg-gray-700'
+          ? 'bg-primary text-white'
           : 'bg-trasparent dark:bg-trasparent'
-      } inset-x-0 w-full flex justify-between items-center duration-300 px-20`}
+      } inset-x-0 w-full flex justify-between items-center duration-300 px-20 rounded-b-lg`}
     >
       <figure>
         <img src="favicon.ico" alt="" width={'50px'} />
