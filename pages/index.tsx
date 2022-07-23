@@ -5,6 +5,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Hero />
+      <Hero />
     </>
   )
 }

@@ -5,4 +5,9 @@ export default interface LayoutProps {
 export interface LiItems {
   children: string
   link?: any
+  color: boolean
+}
+
+export interface MobileType {
+  open: boolean
 }
